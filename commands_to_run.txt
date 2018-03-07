@@ -1,2 +1,2 @@
 # Train GNMT 8 layer on Agiga
---src=article --tgt=title --hparams_path=nmt/standard_hparams/agiga_gnmt_8_layer.json --out_dir=~/agiga_gnmt --vocab_prefix=~/data/vocab --train_prefix=~/data/train --dev_prefix=~/data/valid --test_prefix=~/data/test
+python -m nmt.nmt --src=article --tgt=title --hparams_path=nmt/standard_hparams/agiga_gnmt_8_layer.json --out_dir=~/agiga_gnmt --vocab_prefix=~/data/vocab --train_prefix=~/data/train --dev_prefix=~/data/valid --test_prefix=~/data/test
