@@ -34,9 +34,10 @@ def create_vocab(input_path, output_path, append=False, shared_set = None, prelo
           add_word(word, shared_set, output_file)
 
 def add_word(word, word_set, file):
+  word = word.strip('\n')
   if word not in word_set:
     word_set.add(word)
-    file.write(word.strip('\n') + '\n')
+    file.write(word + '\n')
 
 def main(FLAGS):
   src_file_path = path.join(FLAGS.input_base_path, FLAGS.src_input_name)
@@ -65,6 +66,7 @@ def main(FLAGS):
 
     create_vocab(input_path=src_file_path, output_path=src_vocab_path, append=False, shared_set=None)
     create_vocab(input_path=tgt_file_path, output_path=tgt_vocab_path, append=False, shared_set=None)
+
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
