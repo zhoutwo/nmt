@@ -21,6 +21,7 @@
   "decay_scheme": "luong10",
   "num_units": 1024,
   "optimizer": "sgd",
+  "random_seed": 137,
   "residual": true,
   "share_vocab": true,
   "subword_option": "bpe",
